@@ -1,0 +1,15 @@
+
+
+<div class="jumbotron">
+	<p id="notice"><%= notice %></p>
+	<p>
+	  <strong><%= @post.title %></strong>
+	</p>
+
+	<p>
+	  <%= @post.body %>
+	</p>
+
+	<%= link_to 'Edit', edit_post_path(@post), { :class=>"btn btn-update" } %> 
+	<%= link_to 'Back', posts_path, { :class=>"btn btn-success" }%>
+</div>

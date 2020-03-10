@@ -1,0 +1,105 @@
+
+
+<% if user_signed_in? %>
+  <div class="jumbotron welcome">
+    <%= image_tag("welcome.png", :alt => "rss feed") %>
+    <p class="lead">
+      You have logged like a Team member successfully!  If this were a real app some sweet content
+      would go here.  But it's just a test.  You might want to sign out now.
+    </p>
+  </div>
+  <div class="jumbotron">
+	<h3>Latest Post</h3>
+
+	<table>
+	  <thead>
+		<tr>
+		  <th></th>
+		  <th></th>
+		  <th colspan="1"></th>
+		</tr>
+	  </thead>
+
+	  <tbody>
+		<% @posts.each do |post| %>
+		  <tr>
+			<td><%= image_tag("note_icon.png", :alt => "rss feed") %></td>
+			<td><%= post.title %></td>
+			<td><%= link_to 'Show', post ,{ :class=>"link-success" }%></td>
+		  </tr>
+		<% end %>
+	  </tbody>
+	</table>
+	<br/>
+	<%= link_to 'New Post', new_post_path, { :class=>"btn btn-success" }%>
+	
+  </div>
+	<br>
+  <div class="jumbotron">
+	<p class="lead">
+      If you want to log out
+    </p><%= link_to "Log Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-cancel' %>
+  </div>
+  <% elsif admin_signed_in? %>
+	 <div class="jumbotron welcome">
+    <%= image_tag("welcome.png", :alt => "rss feed") %>
+    <p class="lead">
+      You have logged like an Admin successfully!  If this were a real app some sweet content
+      would go here.  But it's just a test.  You might want to sign out now.
+    </p>
+  </div>
+  <div class="jumbotron">
+	<h3>Latest Post</h3>
+
+	<table>
+	  <thead>
+		<tr>
+		  <th></th>
+		  <th></th>
+		  <th colspan="3"></th>
+		</tr>
+	  </thead>
+
+	  <tbody>
+		<% @posts.each do |post| %>
+		  <tr>
+			<td><%= image_tag("note_icon.png", :alt => "rss feed") %></td>
+			<td><%= post.title %></td>
+			<td><%= link_to 'Show', post ,{ :class=>"link-success" }%></td>
+			<td><%= link_to 'Edit', edit_post_path(post),{ :class=>"link-success" } %></td>
+			<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?',:class=>"link-success" } %></td>
+		  </tr>
+		<% end %>
+	  </tbody>
+	</table>
+	<br/>
+	<%= link_to 'New Post', new_post_path, { :class=>"btn btn-success" }%>
+	
+  </div>
+	<br>
+  <div class="jumbotron">
+	<p class="lead">
+      If you want to log out
+    </p><%= link_to "Log Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-cancel' %>
+  </div>
+  <% else %>
+	<div class="jumbotron">
+		<h2><%= image_tag("welcome.png", :alt => "rss feed") %></h2>
+		<br/><br/><br/><br/>
+		<p class="lead">
+		  You must log in or sign up before you can access our super sweet test code.
+		</p>
+		<br><br>
+		<div class="row-fluid">
+		  <div class="span6">
+			<%= link_to "Log In", new_user_session_path, :class => "btn btn-success" %>
+			<%= link_to "User Sign Up", new_user_registration_path, :class => "btn btn-login" %>
+			<%= link_to "Admin Sign Up", new_admin_registration_path, :class => "btn btn-login" %>
+		  </div>
+		  <div class="span6">
+			
+		  </div>
+		</div>
+	</div>
+  <% end %>
+

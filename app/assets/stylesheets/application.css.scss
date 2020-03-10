@@ -1,0 +1,251 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "chosen.css";
+@import "fonts.css";
+@import "gauge.css";
+@import "graph.css";
+@import "jquery.fancySelect.css";
+@import "main.css";
+@import "table.css";
+
+body {
+  /* Location of the image */
+  background-image: url(background-photo.jpg);
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+
+
+/* User sign in and sign forms. */
+
+h2 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #666;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 44px;
+}
+
+h3 {
+  font-family: verdana, arial, helvetica, sans-serif;
+  height: 24px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #666;
+  font-size: 20px;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 44px;
+}
+
+td {
+  padding-right: 10px;
+}
+
+.link-success {
+  padding-right: 0px;
+}
+
+.link-success:hover {
+  color: #66D37E;
+  background-color: #fff;
+}
+
+
+.textarea {
+  width: 300px;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+	color: #666;
+	font-size: 14px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: 100;
+}
+
+a,i {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+
+
+.btn-success {
+    background-color: #66D37E;
+	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 15px 20px !important;
+    border: none;
+	width: 130px;
+	color: #666;
+}
+
+.btn-success:hover {
+  background-color: #449456;
+}
+
+.btn-update {
+    background-color: #5DA6BA;
+	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 15px 20px !important;
+    border: none;
+	width: 130px;
+	color: #666;
+	border-radius: 4px;
+}
+
+
+.btn-update:hover {
+  background-color: #1C758C;
+}
+
+.btn-cancel {
+    background-color: #ED5f47;
+	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 15px 20px !important;
+    border: none;
+	width: 210px;
+	color: #666;
+}
+
+.btn-cancel:hover {
+  background-color: #B3260E;
+}
+
+
+.btn-login {
+    background-color: #e3935d;
+	font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    padding: 15px 20px !important;
+    border: none;
+	width: 160px;
+	color: #666;
+	border-radius: 4px;
+}
+
+
+.btn-login:hover {
+  background-color: #cc7133;
+}
+
+.edit_field {
+  text-align: left;
+}
+
+.navbar-inverse .navbar-nav li{
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+
+.navbar-brand{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+.alert{
+  color: white;
+  text-align: center;
+}
+
+.jumbotron{
+  background-color: #fff;
+  width: 800px;
+  text-align: center;
+  margin-left: 250px;
+}
+
+.jumbotron p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.jumbotron h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+}
+
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+  width: 240px;
+}
